@@ -20,7 +20,7 @@ export const getUsersById = async(req,res) =>{
 
 export const getUsersByName = async(req,res) =>{
     try {
-        const user = await User.find({name:req.param.id});
+        const user = await User.find({name:req.param.name});
         res.status(200).json(user);
     } catch (error) {
         res.status(404).json({message : error.message});
