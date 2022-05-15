@@ -1,13 +1,12 @@
 import express from "express";
 import { 
-    getUsers, getUsersById, getUsersByName, saveUser, updateUser, deleteUser 
+    getUsers, getUserById, saveUser, updateUser, deleteUser 
 } from "../controllers/UserController.js"
 
 const router = express.Router();
 
 router.get('/users', getUsers)
-router.get('/users/:id', getUsersById)
-router.get('/users/:name', getUsersByName)
+router.get('/users/:id', getUserById)
 router.post('/users', saveUser)
 router.patch('/users', updateUser)
 router.delete('/users', deleteUser)
